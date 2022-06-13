@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwagOrderingApp.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="{Binding Name}">
+
+    <StackLayout>
+
+        <Label Text="Swag T-shirt" FontSize="Title" Padding="30,10,30,10" HorizontalOptions="CenterAndExpand"/>
+
+        <Entry x:Name="{Binging Name}" Placeholder="Enter Name"/> 
+ 
+
+        <StackLayout RadioButtonGroup.GroupName="{Binding Gender}" RadioButtonGroup.SelectedValue="{Binding Selection}">
+            <Label Text="Select you gender" FontSize="16"/>
+            <RadioButton Content="Female"/>
+            <RadioButton Content="Male"/>
+        </StackLayout>
+
+
+
+        <StackLayout RadioButtonGroup.GroupName="{Binding Size}" RadioButtonGroup.SelectedValue="{Binding Selection}">
+            <Label Text="T-shirt size(S,M,L,XL)"/>
+            <RadioButton Content="Small"/>
+            <RadioButton Content="Medium"/>
+            <RadioButton Content="Large"/>
+            <RadioButton Content="Extra Large"/>
+        </StackLayout>
+
+
+        <Entry x:Name="Orderdate" Placeholder="Enter Date" Text="{Binding Date}"/>
+
+        <Label Text="T-SHIRT COLOUR"/>
+        <StackLayout RadioButtonGroup.GroupName="{Binding Colour}" RadioButtonGroup.SelectedValue="{Binding Selection}">
+
+            <RadioButton Content="Black"/>
+            <RadioButton Content="White"/>
+            <RadioButton Content="Multi-Colour"/>
+
+
+
+            <Entry x:Name="address" Placeholder="Address" Text="{Binding Address}"/>
+
+
+            <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
